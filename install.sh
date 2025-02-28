@@ -1,10 +1,10 @@
 #!/bin/bash
 sudo pacman -Syu
 sudo pacman -S base-devel linux-headers --noconfirm
-sudo pacman -S hyprland kitty gtk3 rofi-wayland dolphin sddm sddm-kcm git nano--noconfirm
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si --noconfirm
+sudo pacman -S hyprland kitty gtk3 rofi-wayland dolphin sddm sddm-kcm git nano --noconfirm
+git clone --recursive https://github.com/hyprwm/Hyprland
+cd Hyprland
+make all && sudo make install --noconfirm
 echo wrappedhl > ~/wrappedhl
 echo .bash_profile > ~/.bash_profile
 echo 00-hyprland.conf > /etc/sddm.conf.d/00-hyprland.conf
