@@ -1,3 +1,3 @@
 if [ -z "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
-exec ~/.local/bin/wrappedhl
+exec ~/wrappedhl
 fi
