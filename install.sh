@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 sudo pacman -Syu
 sudo pacman -S base-devel linux-headers -y
 Sudo pacman -S hyprland kitty gtk3 rofi-wayland dolphin sddm sddm-kcm git sudo -y
