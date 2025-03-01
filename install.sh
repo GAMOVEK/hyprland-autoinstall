@@ -60,9 +60,16 @@ bind = SUPER_SHIFT, minus, movetoworkspace, 7
 bind = SUPER_SHIFT, underscore, movetoworkspace, 8
 bind = SUPER_SHIFT, ccedilla, movetoworkspace, 9
 bind = SUPER_SHIFT, agrave, movetoworkspace, 10' ~/.config/hypr/hyprland.conf
+sudo systemctl enable sddm
+
+#theme sddm
+git clone siddrs/tokyo-night-sddm ~/usr/share/sddm/themes/
+sudo sed -i 's/Current=/Current=tokyo-night-sddm/' ~/usr/lib/sddm/sddm.conf.d/default.conf
+
+
+#tlp batterie
 pacman -S tlp tlp-rdw
 systemctl enable tlp.service
 systemctl enable NetworkManager-dispatcher.service
 systemctl mask systemd-rfkill.service systemd-rfkill.socket
-sudo systemctl enable sddm
 sudo reboot 
