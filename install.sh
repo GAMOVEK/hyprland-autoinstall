@@ -26,7 +26,7 @@ sudo sed -i 's/Current=/Current=tokyo-night-sddm/' /etc/sddm.conf
 
 
 #tlp batterie
-pacman -S tlp tlp-rdw
+pacman -S tlp tlp-rdw --noconfirm
 systemctl enable tlp.service
 systemctl enable NetworkManager-dispatcher.service
 systemctl mask systemd-rfkill.service systemd-rfkill.socket
