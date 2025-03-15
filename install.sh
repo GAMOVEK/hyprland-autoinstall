@@ -6,6 +6,7 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si --noconfirm
 sudo yay -Syyu
+cd ..
 cat  wrappedhl | sudo tee ~/wrappedhl
 cat .bash_profile | sudo tee  ~/.bash_profile
 sudo mkdir /etc/sddm.conf.d
