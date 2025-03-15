@@ -9,7 +9,10 @@ sudo yay -Syyu
 cd ..
 
 sudo systemctl enable sddm
-
+cat hypr.sh | sudo tee /opt/hypr.sh
+sudo chmod +x /opt/mon_script.sh
+cat hypr.service | sudo tee /etc/systemd/system/hypr.service
+sudo systemctl enable hypr.service
 #tlp batterie
 pacman -S tlp tlp-rdw --noconfirm
 systemctl enable tlp.service
