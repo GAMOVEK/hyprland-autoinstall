@@ -1,4 +1,5 @@
 #!/bin/bash
+
 cat  wrappedhl | sudo tee ~/wrappedhl
 cat .bash_profile | sudo tee  ~/.bash_profile
 sudo mkdir /etc/sddm.conf.d
@@ -14,3 +15,6 @@ git clone siddrs/tokyo-night-sddm ~/usr/share/sddm/themes/
 sudo cp -i /usr/lib/sddm/sddm.conf.d/default.conf /etc/sddm.conf
 sudo sed -i 's/User=/User=gamovek/' /etc/sddm.conf
 sudo sed -i 's/Current=/Current=tokyo-night-sddm/' /etc/sddm.conf
+sudo systemctl disable script-une-fois.service
+sudo rm /etc/systemd/system/hypr.service
+sudo rm /opt/mon_script.sh
