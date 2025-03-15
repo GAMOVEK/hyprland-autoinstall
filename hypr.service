@@ -1,0 +1,9 @@
+[Unit]
+Description=Exécute le script une seule fois au démarrage
+
+[Service]
+Type=oneshot
+ExecStart=/opt/hypr.sh
+
+[Install]
+WantedBy=multi-user.target
