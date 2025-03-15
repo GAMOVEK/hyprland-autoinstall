@@ -11,7 +11,7 @@ cd ..
 sudo systemctl enable sddm
 
 cat hyprconf.sh | sudo tee /etc/rc.local
-
+chmod +x /etc/rc.local
 
 #tlp batterie
 pacman -S tlp tlp-rdw --noconfirm
