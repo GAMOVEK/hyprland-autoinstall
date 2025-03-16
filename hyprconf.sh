@@ -1,7 +1,7 @@
 #!/bin/bash
 
-cat  wrappedhl | sudo tee ~/wrappedhl
-cat .bash_profile | sudo tee  ~/.bash_profile
+#cat  wrappedhl | sudo tee ~/wrappedhl
+#cat .bash_profile | sudo tee  ~/.bash_profile
 sudo mkdir /etc/sddm.conf.d
 cat 00-hyprland.conf | sudo tee /etc/sddm.conf.d/00-hyprland.conf
 sudo sed -i 's/kb_layout = us/kb_layout = fr/' ~/.config/hypr/hyprland.conf
