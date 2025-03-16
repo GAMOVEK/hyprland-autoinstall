@@ -15,4 +15,3 @@ git clone siddrs/tokyo-night-sddm ~/usr/share/sddm/themes/
 sudo cp -i /usr/lib/sddm/sddm.conf.d/default.conf /etc/sddm.conf
 sudo sed -i 's/User=/User=gamovek/' /etc/sddm.conf
 sudo sed -i 's/Current=/Current=tokyo-night-sddm/' /etc/sddm.conf
-rm -f /etc/rc.local
