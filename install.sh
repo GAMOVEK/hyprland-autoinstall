@@ -27,7 +27,7 @@ cat > "$CLEANER_SCRIPT" <<EOF
 # Supprime la ligne cron contenant le script cible
 crontab -l | grep -v "@reboot $TARGET_SCRIPT" | crontab -
 # Se supprime lui-même après exécution
-rm -- "$0"
+rm -- "\$0"
 EOF
 
 # Rendre les scripts exécutables
@@ -35,6 +35,6 @@ chmod +x "$TARGET_SCRIPT"
 chmod +x "$CLEANER_SCRIPT"
 
 # Ajouter la tâche cron (exécute TARGET_SCRIPT puis CLEANER_SCRIPT au démarrage)
-(crontab -l 2>/dev/null; echo "@reboot "~/hyprland-autoinstall/hyprconf.sh" && "~/hyprland-autoinstall/clean_cron.sh" ") | crontab -
+(crontab -l 2>/dev/null; echo "@reboot $TARGET_SCRIPT && $CLEANER_SCRIPT") | crontab -
 
 sudo reboot 
