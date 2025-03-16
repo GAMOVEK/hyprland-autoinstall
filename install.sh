@@ -17,9 +17,9 @@ systemctl enable NetworkManager-dispatcher.service
 systemctl mask systemd-rfkill.service systemd-rfkill.socket
 
 #test cron config
-TARGET_SCRIPT="~/hyprland-autoinstall/hyprconf.sh"
+TARGET_SCRIPT="$HOME/hyprland-autoinstall/hyprconf.sh"
 #nettoie le cron etc
-CLEANER_SCRIPT="~/hyprland-autoinstall/clean_cron.sh"
+CLEANER_SCRIPT="$HOME/hyprland-autoinstall/clean_cron.sh"
 
 # Créer le script clean_cron.sh (sera exécuté une fois au démarrage)
 cat > "$CLEANER_SCRIPT" <<EOF
