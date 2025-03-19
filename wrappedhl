@@ -14,7 +14,7 @@ export QT_QPA_PLATFORM="wayland"
 export QT_QPA_PLATFORMTHEME=qt5ct
 
 #swaylock
-cd $HOME/pic/wallpapers && swaybg -m fill -i $(ls *.jpg | shuf | head -n 1) &
+#cd $HOME/pic/wallpapers && swaybg -m fill -i $(ls *.jpg | shuf | head -n 1) &
 
 
 # Paramètres pour GTK
@@ -23,6 +23,6 @@ cd $HOME/pic/wallpapers && swaybg -m fill -i $(ls *.jpg | shuf | head -n 1) &
 # gsettings set org.gnome.desktop.interface cursor-theme 'WhiteSur Cursors'
 # gsettings set org.gnome.desktop.interface font-name 'JetBrains Mono NL SemiBold'
 # Active le verrouillage numérique
-setleds +num
+#setleds +num
 
 exec Hyprland
