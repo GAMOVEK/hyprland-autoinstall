@@ -1,5 +1,5 @@
 #!/bin/bash
-
+sudo pacman -S qt5-quickcontrols2 qt5-graphicaleffects qt5-svg
 #cat  wrappedhl | sudo tee ~/wrappedhl
 #cat .bash_profile | sudo tee  ~/.bash_profile
 sudo mkdir /etc/sddm.conf.d
@@ -11,7 +11,7 @@ sudo sed -i 's/$menu = wofi --show drun/$menu = rofi -show drun/' ~/.config/hypr
 sudo sed -i 's/bind = $mainMod, R,/bind = $mainMod, F,/' ~/.config/hypr/hyprland.conf
 
 #theme sddm
-#git clone siddrs/tokyo-night-sddm /usr/share/sddm/themes/
+git clone https://github.com/siddrs/tokyo-night-sddm /usr/share/sddm/themes/
 sudo cp -i /usr/lib/sddm/sddm.conf.d/default.conf /etc/sddm.conf
 sudo sed -i 's/User=/User=gamovek/' /etc/sddm.conf
-#sudo sed -i 's/Current=/Current=tokyo-night-sddm/' /etc/sddm.conf
+sudo sed -i 's/Current=/Current=tokyo-night-sddm/' /etc/sddm.conf
