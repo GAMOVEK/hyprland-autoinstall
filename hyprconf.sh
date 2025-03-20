@@ -11,7 +11,8 @@ sudo sed -i 's/$menu = wofi --show drun/$menu = rofi -show drun/' ~/.config/hypr
 sudo sed -i 's/bind = $mainMod, R,/bind = $mainMod, F,/' ~/.config/hypr/hyprland.conf
 
 #theme sddm
-git clone https://github.com/siddrs/tokyo-night-sddm /usr/share/sddm/themes/
+git clone https://github.com/JaKooLit/simple-sddm.git ~/simple-sddm
+sudo mv ~/simple-sddm /usr/share/sddm/themes/
 sudo cp -i /usr/lib/sddm/sddm.conf.d/default.conf /etc/sddm.conf
 sudo sed -i 's/User=/User=gamovek/' /etc/sddm.conf
-sudo sed -i 's/Current=/Current=tokyo-night-sddm/' /etc/sddm.conf
+sudo sed -i 's/Current=/Current=simple-sddm/' /etc/sddm.conf
